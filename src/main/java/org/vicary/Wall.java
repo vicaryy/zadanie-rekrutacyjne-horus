@@ -14,7 +14,7 @@ public class Wall implements Structure {
 
     @Override
     public Optional<Block> findBlockByColor(String color) {
-        return findBlockByColor(color, this.blocks);
+        return findBlockByColor(color, blocks);
     }
 
     private Optional<Block> findBlockByColor(String color, List<Block> blocks) {
@@ -35,7 +35,7 @@ public class Wall implements Structure {
 
     @Override
     public List<Block> findBlocksByMaterial(String material) {
-        return findBlocksByMaterial(material, new ArrayList<>(), this.blocks);
+        return findBlocksByMaterial(material, new ArrayList<>(), blocks);
     }
 
     private List<Block> findBlocksByMaterial(String material, List<Block> foundBlocks, List<Block> blocks) {
@@ -53,7 +53,7 @@ public class Wall implements Structure {
 
     @Override
     public int count() {
-        return count(this.blocks);
+        return count(blocks);
     }
 
     private int count(List<Block> blocks) {
